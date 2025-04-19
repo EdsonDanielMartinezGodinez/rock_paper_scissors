@@ -33,15 +33,15 @@ let computerscore = 0;
 
 function playRound(humanchoice, computerchoice) {
     if (humanchoice == "Scissors" && computerchoice == "Rock" || humanchoice == "Paper" && computerchoice == "Scissors" || humanchoice == "Rock" && computerchoice == "Paper") {
-        console.log("Gana la computadora");
+        console.log("Computer wins");
         computerscore += 1;
         return computerscore;
     } else if (humanchoice == "Rock" && computerchoice == "Scissors" || humanchoice == "Scissors" && computerchoice == "Paper" || humanchoice == "Paper" && computerchoice == "Rock") {
-        console.log("Gana el jugador");
+        console.log("Player Wins");
         humanscore += 1;
         return humanscore;
     } else if (humanchoice == "Scissors" && computerchoice == "Scissors" || humanchoice == "Paper" && computerchoice == "Paper" || humanchoice == "Rock" && computerchoice == "Rock") {
-        return console.log("Empate");
+        return console.log("Draw");
     }
 
 }
@@ -70,9 +70,9 @@ function playGame() {
     playRound(humanSelection, computerSelection);
     rondas += 1;
     if (rondas == 5) {
-        return humanscore > computerscore ? console.log("El humano gana la ronda") : console.log("El bot gana la ronda");
+        return humanscore > computerscore ? console.log("The human wins the round") : console.log("The Computer wins the round");
     }else if(humanscore == computerscore ){
-        return console.log("Empate entre maquinas y humanos");
+        return console.log("Draw between human and computer");
     }
 }
 
